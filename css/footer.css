@@ -1,0 +1,44 @@
+footer {
+    flex: 0 1 auto;
+}
+
+.footer-container {
+    position: relative;
+    display: flex;
+    background-color: #edede9;
+}
+
+.footer-table {
+    flex: 0 1 40%;
+    border: none;
+    margin: 3% 5%;
+}
+
+.other-info {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-data {
+    border: none;
+    padding: 10px;
+    width: 25%;
+    text-align: left;
+    vertical-align: center;
+}
+
+.footer-p {
+    padding: 10px;
+}
+
+.footer-a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-a:hover {
+    text-decoration: underline;
+}

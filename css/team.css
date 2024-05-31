@@ -1,0 +1,279 @@
+html, body {
+    scroll-behavior: smooth;
+    overflow: visible;
+    margin: 0;
+
+    background-image: url("./teamMember/background-curve.jpg");
+    background-attachment: fixed;
+    background-size: 20%;
+}
+
+.css-navigator {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    top: 0%;
+    bottom: 100%;
+    text-align: center;
+}
+
+.css-aside {
+    position: relative;
+    width: 30%;
+    height: 2500px;
+    left: 68%;
+    z-index: 100;
+    margin: 1.5%;
+}
+
+.css-sideBar {
+    position: sticky;
+    top: 0%;
+    left: 100%;
+    width: 50%;
+    box-shadow: 0px 2px 2px #888888;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(178, 178, 178); 
+    padding: 5px;
+}
+
+.css-sideBar-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 5px;
+    padding: 5px;
+    list-style-type: none;
+
+    /* border-width: 5px;
+    border-style: solid;
+    border-color: black; */
+}
+
+.css-sideBar-list-item {
+    margin: 5px;
+    padding: 5px;
+
+    /* border-width: 5px;
+    border-style: solid;
+    border-color: black; */
+}
+
+.css-sideBar-list-href {
+    text-decoration: none;
+    color: black;
+    font-size: small;
+    padding: 5px;
+    text-align: center;
+
+    transition-duration: 0.5s;
+}
+
+
+.css-acticle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.css-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+    overflow: auto;
+
+    /* border-width: 5px;
+    border-style: solid;
+    border-color: black; */
+}
+
+.css-container-video {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    height: 80%;
+}
+
+.css-container-video-2 {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 5%;
+    max-width: 80%;
+    height: 55%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(152, 111, 6, 0.559)
+}
+
+.css-video {
+    width: 2000px;
+    height: auto;
+}
+
+.css-seeDetail {
+    position: relative;
+    display: block;
+    margin-left: 40%;
+    margin-right: 40%;
+    top: -20%;
+    width: 20%;
+    /* border-style: solid;
+    border-width: 3px;
+    border-color: black; */
+    z-index: 40;
+}
+
+.css-button-seeDetail {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color: #ffffff;
+    font-size: auto;
+    text-decoration: none;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition-duration: 0.5s;
+    padding: 10px;
+}
+
+.css-introduction {
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    /* height: 100%; */
+    height: 100vh;
+    /* padding: 10px; */
+}
+
+.css-introduction-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.css-img-center {
+    position: relative;
+    width: 25%;
+}
+
+.css-introduction-members {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.css-introduction-member {
+    flex: 1;
+    text-align: center;
+    list-style: none;
+    /* border-style: solid;
+    border-width: 3px;
+    border-color: black; */
+}
+
+.css-pure-href {
+    text-decoration: none;
+    color: black;
+}
+
+.css-introduction-avatar {
+    border-radius: 50%;
+    border-color: rgba(218, 165, 32, 0);
+    border-width: 2px;
+    border-style: solid;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.css-schedule {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 1000px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.css-schedule-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+}
+
+.css-schedule-item-date {
+    font-size: large;
+    padding: 10px;
+    color: black;
+}
+
+.css-schedule-item-results {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: black;
+
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left: 0;
+    border-right: 0;
+    border-style: solid;
+    border-color: lightgray;
+
+    transition-duration: 0.5s;
+}
+
+.css-schedule-item-results-team-win {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    overflow: hidden;
+    align-items: center;
+    color: goldenrod;
+}
+
+.css-schedule-item-results-team-lose {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    align-items: center;
+    
+    height: 100px;
+    opacity: 10%;
+
+    transition-duration: 0.5s;
+}
+
+.css-schedule-item-results-team-icon {
+    width: 80px;
+    height: 80px;
+
+    /* border-style: solid;
+    border-width: 3px;
+    border-color: black; */
+
+    margin: 10px;
+}

@@ -1,0 +1,67 @@
+.daohang * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.daohang body {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#e5e5e5, #ffffff);
+}
+
+.daohang .head_div {
+    position: relative;
+    min-height: 30%;
+    flex: 0 1 auto;
+}
+
+.daohang .nav-head {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 2% 10%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0));
+}
+
+.daohang .logo {
+    position: relative;
+    left: -20%;
+    width: 130px;
+}
+
+.daohang .nav-ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.daohang .nav-li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.daohang .nav-a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.daohang .nav-a.active {
+    color: #ffffff;
+}
+
+.daohang .nav-a:hover {
+    background: #fff;
+    color: #2b1055;
+}
