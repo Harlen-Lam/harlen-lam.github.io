@@ -1,0 +1,177 @@
+<html>
+<head>
+    <title>LPL Champions</title>
+    <link rel="stylesheet" type="text/css" href="./nav_header.css">
+    <link rel="stylesheet" type="text/css" href="./head_container.css">
+    <link rel="stylesheet" type="text/css" href="./player.css">
+    <link rel="stylesheet" type="text/css" href="./footer.css">
+    <script type="text/javascript" src="./functions.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+</head>
+<body>
+    <div class="head_div">
+        <div class="LPL-container">
+            <a class="LPL-a" href="https://lpl.qq.com/" target="_blank">
+                <img class="LPL" src="./team/LPL.jpeg">
+            </a>
+        </div>
+        <header class="nav-head">
+            <!-- left logo -->
+            <a href="http://www.leagueoflegends.com/en-gb/" target="_blank">
+                <img class="logo" src="./team/LOL_icon.png">
+            </a>
+            <!-- right nav -->
+            <ul class="nav-ul">
+                <li class="nav-li">
+                    <a href="http://localhost:3000" class="nav-a active">Home</a>
+                </li>
+                <li class="nav-li">
+                    <a href="http://localhost:3000/team" class="nav-a" target="_blank">IG</a>
+                </li>
+                <li class="nav-li">
+                    <a href="http://localhost:3000/team" class="nav-a" target="_blank">FPX</a>
+                </li>
+                <li class="nav-li">
+                    <a href="http://localhost:3000/team" class="nav-a" target="_blank">EDG</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="head_container">
+        <div class="slideshow">
+            <a class="slideshow_a" href="http://localhost:3000/team" target="_blank">
+                <img class="slideshow_img" src="./team/IG.jpeg" alt="Not Found">
+            </a>
+
+            <button class="leftButton transparent_btn" onclick="prevSlide()">
+                <img src="./btn/left.svg">
+            </button>
+            <button class="rightButton transparent_btn" onclick="nextSlide()">
+                <img src="./btn/right.svg">
+            </button>
+            <div class="btn-container">
+                <button class="number_btn transparent_btn" onclick="choose_slide(0)">
+                    <img class="btn_img_dot" src="./btn/dot-black.png">
+                </button>
+                <button class="number_btn transparent_btn" onclick="choose_slide(1)">
+                    <img class="btn_img_dot" src="./btn/dot-white.png">
+                </button>
+                <button class="number_btn transparent_btn" onclick="choose_slide(2)">
+                    <img class="btn_img_dot" src="./btn/dot-white.png">
+                </button>
+            </div>
+            <script>
+                slide_change();
+            </script>
+        </div>
+        <div class="noticeBoard">
+            <team-header>
+                <ul class="noticeBoard_ul">
+                    <li class="noticeBoard_li">
+                        <a class="noticeBoard_a active" onmouseover="news_report_hover(0)">IG</a>
+                    </li>
+                    <li class="noticeBoard_li">
+                        <a class="noticeBoard_a" onmouseover="news_report_hover(1)">FPX</a>
+                    </li>
+                    <li class="noticeBoard_li">
+                        <a class="noticeBoard_a" onmouseover="news_report_hover(2)">EDG</a>
+                    </li>
+                </ul>
+            </team-header>
+            <content-container>
+                <h1 class="content-head">IG News Report</h1>
+                <hr class="content-head-line">
+                <div class="content-body">
+                    <ul class="content-ul">
+                        <!-- <li class="content-li">
+                            <a class="content-a" href="http://www.google.com" target="_blank">IG 666!</a>
+                            <hr class="content-a-line">
+                        </li> -->
+                        <script>
+                            news_report_hover(0);
+                            setTimeout(news_report_hover, 2000);
+                        </script>
+                    </ul>
+                </div>
+            </content-container>
+        </div>
+
+    </div>
+
+    <div class="player-container">
+        <div class="player-header">
+            <h1>Players</h1>
+        </div>
+        <div class="player-body">
+            <form class="player-form" onsubmit="event.preventDefault();">
+                <input class="search-input" type="search" placeholder="输入战队名或者选手名(如IG,TheShy)">
+                <input class="submit-btn" type="image" src="./btn/search.png" alt="Search"
+                    onclick="search_submit()">
+            </form>
+            <h2 class="player-search-head">All Players</h2>
+            <div class="player-show">
+                <div class="player">
+                    <a class="player-photo-a" href="#TS">
+                        <img class="player-photo" src="./players/IG-TheShy.jpeg" />
+                    </a>
+                    <a class="player-info" href="#TS">TheShy</a>
+                </div>
+                <script>
+                    search_submit();
+                    setTimeout(search_submit, 3000);
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <table class="footer-table">
+                <tr>
+                    <th class="footer-data">Group Member</th>
+                    <th class="footer-data">Student ID</th>
+                </tr>
+                <tr>
+                    <td class="footer-data">Chen Hao Dong</td>
+                    <td class="footer-data">23443383</td>
+                </tr>
+                <tr>
+                    <td class="footer-data">Lin Hai Long</td>
+                    <td class="footer-data">23473142</td>
+                </tr>
+                <tr>
+                    <td class="footer-data">Liu Jia Xin</td>
+                    <td class="footer-data">23433698</td>
+                </tr>
+                <tr>
+                    <td class="footer-data">Liu Zheng</td>
+                    <td class="footer-data">23427973</td>
+                </tr>
+            </table>
+            <div class="other-info">
+                <p class="footer-p">联系我们：</p>
+                <p class="footer-p">
+                    <a class="footer-a" href="mailto:23473142@life.hkbu.edu.hk">23473142@life.hkbu.edu.hk</a>
+                </p>
+                <p class="footer-p">本网站适合所有爱好LOL的玩家；希望您能找到想要的信息。</p>
+                <p class="footer-p">
+                    COPYRIGHT &copy; 2023 HKBU-AIDM7450
+                </p>
+                <p class="footer-p">
+                    本网站仅为课程项目，无任何其他用途，如有侵权，联系删除。
+                </p>
+                <p class="footer-p">
+                    <a class="footer-a" href="https://lol.fandom.com/wiki/League_of_Legends_Esports_Wiki" target="_blank">图片来源</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <div class="btn-class">
+        <button class="to_top_btn transparent_btn" onclick="scroll_to_top()">
+            <img class="top-img" src="./btn/up-arrow.png" />
+        </button>
+    </div>
+</body>
+</html>

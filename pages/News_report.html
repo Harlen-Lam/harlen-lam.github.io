@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Report Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease; 
+    }
+
+    img:hover {
+      transform: scale(1.1); 
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .author {
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .bigger {
+      background-color: #3498db;
+      color: #fff;
+      margin-right: 10px;
+    }
+
+    .smaller {
+      background-color: #e74c3c;
+      color: #fff;
+    }
+
+    .scroll-to-top {
+      background-color: #2ecc71;
+      color: #fff;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    #fullscreen-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: 9999;
+            cursor: pointer; 
+     }  
+
+     footer {
+        background-color: lightgray;
+    }
+
+  </style>
+</head>
+
+<body>
+  
+    <header>
+        <h1>News Report: League of Legends is a Global Gaming Phenomenon</h1>
+        <div class="buttons">
+          <button class="bigger" onclick="changeFontSize('bigger')">Enlarge the Font</button>
+          <button class="smaller" onclick="changeFontSize('smaller')">Shrink the Font</button>
+        </div>
+    </header>
+
+    <article>
+        <a href="http://localhost:3000/">
+            <img src="https://p2.bahamut.com.tw/B/2KU/20/44b9e3c6f79d35e0f0d14748771hdb85.JPG" alt="News Image">
+        </a>
+        <h1>Click on the image to jump to the main page</h1>
+        <p>League of Legends, often abbreviated as LoL, stands as a pinnacle in the world of online multiplayer gaming.This game is very funny.</p>
+        <p> League of Legends is a team-based strategy game where two teams, each consisting of five players, compete against each other with the ultimate goal of destroying the opposing team's Nexus, a core building located within their base. The game offers a diverse roster of champions, each with unique abilities and playstyles, allowing for a dynamic and strategic gaming experience.</p>
+    </article>
+
+    <article>
+        <a href="http://localhost:3000/">
+            <img src="https://static-cse.canva.cn/blob/67065/29wuganme.jpeg" alt="News Image">
+        </a>
+        <p>One of the key factors contributing to League of Legends' success is its thriving esports scene. The game has established itself as a major player in competitive gaming, with professional leagues and tournaments held globally. The pinnacle of LoL esports is the annual World Championship, attracting millions of viewers and offering substantial prize pools. The competitive nature of the game has given rise to international stars, turning professional players into household names.</p>
+        <p>Beyond its competitive aspect, League of Legends has cultivated a passionate and engaged community. Online forums, social media groups, and in-game interactions provide players with platforms to share experiences, strategies, and fan creations. The game's rich lore and frequent updates contribute to a constantly evolving narrative, further deepening players' immersion and connection to the game.</p>
+    </article>
+
+    <article>
+        <a href="http://localhost:3000/team">
+            <img src="https://theworldwentaway.files.wordpress.com/2017/04/league-of-legends-3.png" alt="News Image">
+        </a>
+        <h1>Click on this image to see the team information!</h1>
+        <p>League of Legends' influence extends far beyond the realm of gaming. Its success has inspired the creation of spin-off merchandise, animated series, and even music. The game's iconic characters and themes have become cultural touchstones, transcending the boundaries of traditional gaming.</p>
+        <p>In addition to entertainment, League of Legends has demonstrated educational potential. The game requires teamwork, strategic thinking, and quick decision-making, skills that are not only valuable in the gaming world but also applicable in various real-life scenarios. Many educational institutions have recognized these benefits, leading to the integration of esports and gaming-related programs into their curricula.</p>
+    </article>
+
+    <article>
+        <a href="http://localhost:3000/playerInfo">
+            <img src="https://th.bing.com/th/id/R.df67b55a1a07bbd41e7cf08657d9d49f?rik=4CmWRYuQ4p6rOQ&riu=http%3a%2f%2fi4.3conline.com%2fimages%2fpiclib%2f201307%2f17%2fbatch%2f1%2f184990%2f1374027676410msh60s06qe.JPG&ehk=JZ1O3qTTcdM0YmuCNCkGZ0TrryyOzwMhXixAxNLOCr0%3d&risl=&pid=ImgRaw&r=0" alt="News Image">
+        </a>
+        <h1>Click on this image to see the personal information!</h1>
+        <p>League of Legends has not only redefined the gaming landscape but has also become a cultural phenomenon with a lasting impact. Its global appeal, thriving esports scene, passionate community, and educational benefits make it a standout example of how video games can transcend their initial purpose. As we celebrate the game's success on its 1-year birthday, it is clear that League of Legends has left an indelible mark on the world of gaming and beyond.</p>
+        <p>Beyond the virtual realm, League of Legends has become a cultural touchstone, solidifying its place not just as a game but as a global phenomenon that continues to shape the way we play, connect, and compete in the digital age.</p>
+    </article>
+
+    <footer>
+        <p class="author">Creating by: Liu Zheng(23427973), Lin Hailong(23473142), Liu Jiaxin(23433698) and Chen Haodong(23443383).</p>
+        <p>联系我们：</p>
+            <p>
+                <a  href="mailto:23473142@life.hkbu.edu.hk">23473142@life.hkbu.edu.hk</a>
+            </p>
+            <p>本网站适合所有爱好LOL的玩家；希望您能找到想要的信息。</p>
+            <p>
+                COPYRIGHT &copy; 2023 HKBU-AIDM7450
+            </p>
+            <p>
+                本网站仅为课程项目，无任何其他用途，如有侵权，联系删除。
+            </p>
+            <p>
+                <a class="footer-a" href="https://lol.fandom.com/wiki/League_of_Legends_Esports_Wiki" target="_blank">图片来源</a>
+            </p>
+        <button class="scroll-to-top" onclick="scrollToTop()">Scroll to Top</button>
+    </footer>
+
+    <img id="fullscreen-image" src="https://static-cse.canva.cn/blob/67065/29wuganme.jpeg" alt="BIGPICTURE">
+
+    <script>
+        let fontSize = 14;
+
+        function changeFontSize(buttonType) {
+        const paragraphElements = document.querySelectorAll('p');
+        if (buttonType === 'bigger') {
+            fontSize += 2;
+        } else if (buttonType === 'smaller') {
+            fontSize -= 2;
+        }
+
+        paragraphElements.forEach(paragraph => {
+            paragraph.style.fontSize = `${fontSize}px`;
+        });
+        }
+
+        function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.onload = function () {
+            var fullscreenImage = document.getElementById('fullscreen-image');
+
+        fullscreenImage.addEventListener('click', function () {
+                fullscreenImage.style.display = 'none';
+            });
+        };
+     </script>
+</body>
+</html>
+
+
+
+
+
+

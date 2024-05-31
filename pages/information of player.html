@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            /*响应式界面设置*/
+            display: flex;
+            width: 100%;
+            /*总体使用垂直布局， 在left-right盒子内设置左右盒子横向布局*/
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+.gongjuhe {
+    width: 100%;
+    height: 90px;}
+.head_div {
+    width: 100%;
+    height: 90px;
+}
+        .biaoti {
+            width: 100%;
+            height: 90px;
+            background-color: #2c3d53;
+        }
+
+
+        .left-right {
+            display: flex;
+            width: 100%;
+            /*在这里设置左右盒子横向布局*/
+            flex-direction: row;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+
+        .player-introduce-left {
+            display: flex;
+            flex: 4;
+            width: 40%;
+            flex-direction: column;
+            height: auto;
+            background-color: #0e1a28;
+        }
+
+        .player-introduce-right {
+            display: flex;
+            flex: 6;
+            width: 60%;
+            height: auto;
+            background-color: #ebebeb;
+        }
+
+        .player-info {
+            width: 40%;
+            margin-left: 40px;
+            padding-top: 7px;
+        }
+
+        .player-image {
+            display: flex;
+
+        }
+
+        span.playerName-cn {
+            margin-left: 23px;
+            padding-top: 0px;
+        }
+
+
+        span.playerName-en {
+            width: 40%;
+            margin-left: 23px;
+            padding-top: 0px;
+        }
+
+        .player-detail {
+            display: flex;
+            color: #000000;
+            padding: 48px, 0px, 0px;
+        }
+
+        span.playerName-cn {
+            display: flex;
+            color: #FFFFFF;
+            font: 30px 微软雅黑;
+        }
+
+        span.playerName-en {
+            display: flex;
+            color: #FFFFFF;
+            font: 35px "Exotc350 Bd BT";
+            margin-top: 20px, 0, 0;
+        }
+
+        #team-logo {
+            display: flex;
+            width: 150px;
+            margin-left: 0px;
+            padding-top: 0px;
+        }
+
+        div.playerName-en {
+            /*单纯调整一下英文名字和中文名字的间隔*/
+            margin-top: 15px;
+        }
+
+        .personal-data {
+            position: relative;
+            display: flex;
+        }
+
+        .white-title {
+            position: relative;
+            display: flex;
+            color: #FFFFFF;
+            font: 20px 华康POP2体W9;
+            margin-top: 40px;
+            padding-left: 10px;
+            /*调整左内边距， 拉开文字和文字前装饰矩形的距离*/
+        }
+
+        .white-title::before {
+            content: "";
+            position: absolute;
+            /* 添加绝对定位 */
+            left: 0;
+            /* 调整矩形的位置 */
+            top: auto;
+            /* 调整矩形的位置 */
+            width: 5px;
+            height: 30px;
+            background-color:
+                #ffffff;
+            /* 设置矩形的颜色 */
+            margin-right: 10px;
+            /*调整矩形的上下位置*/
+            top: -5px;
+        }
+
+        div.personal-data {
+            /*单纯调整一下间隔*/
+            margin-top: 40px;
+        }
+
+        .personal-table {
+            /*调整表格与上方标题的间隔*/
+            margin-top: 20px;
+        }
+
+        .personal-table ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        .personal-table li {
+            flex: 1;
+            width: 30px;
+            text-align: center;
+            border: 1px solid #4c6585;
+            background-color: #101d31;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 13px;
+            margin-top: 5px;
+            /* 调整间距大小 */
+            border-radius: 5px;
+            /* 添加圆角效果 */
+        }
+
+        .value {
+            flex: 1;
+            font-family: 'Adode Gothic Std', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            color: #FFE9A3;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.1)
+                /* 添加内发光效果 */
+        }
+
+        .lebel {
+            font-size: 8px;
+            color: #F2F2F2;
+
+        }
+
+        .rank {
+            font-size: 10px;
+            color: #A8F7F7;
+        }
+
+        .rank span {
+            font-size: 13px;
+            font-family: 'Adode Gothic Std', Tahoma, Geneva, Verdana, sans-serif;
+            color: #F9A825;
+        }
+
+        /* ---------------------------底下是右边大盒子内的效果------------------------------------ */
+        .personal-hero {
+            position: relative;
+            display: flex;
+        }
+
+        .black-title {
+            position: relative;
+            display: flex;
+            color: #192a41;
+            font: 20px 华康POP2体W9;
+            margin-top: 25px;
+            margin-left: 70px;
+            /*调整左内边距， 拉开文字和文字前装饰矩形的距离*/
+        }
+
+        .black-title::before {
+            content: "";
+            position: absolute;
+            /* 添加绝对定位 */
+            left: 0;
+            /* 调整矩形的位置 */
+            top: auto;
+            /* 调整矩形的位置 */
+            width: 5px;
+            height: 30px;
+            background-color:
+                #192a41;
+            /* 设置矩形的颜色 */
+            margin-right: 10px;
+            margin-left: -10px;
+            /*调整矩形的上下位置*/
+            top: -5px;
+        }
+
+        .hero-name {
+            background-color: #192a41;
+            color: #FFFFFF;
+            font-size: 15px;
+            height: 30px;
+            text-align: center;
+            padding-top: 5px;
+        }
+
+        /* 对图片设置效果 */
+        .hero-image {
+            display: flex;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        a {
+            display: flex;
+        }
+
+        .hero-image :hover {
+            transform: scale(1.1);
+        }
+
+        ul.hero-list {
+            display: flex;
+            list-style-type: none;
+            margin-left: 20px;
+        }
+
+        .hero-all>* {
+            margin-left: 8px;
+        }
+
+        /*-------------比赛记录区-----------------*/
+        .black-title02 {
+            position: relative;
+            display: flex;
+            color: #192a41;
+            font: 20px 华康POP2体W9;
+            margin-top: 30px;
+            margin-left: 70px;
+            /*调整左内边距， 拉开文字和文字前装饰矩形的距离*/
+        }
+
+        .black-title02::before {
+            content: "";
+            position: absolute;
+            /* 添加绝对定位 */
+            left: 0;
+            /* 调整矩形的位置 */
+            top: auto;
+            /* 调整矩形的位置 */
+            width: 5px;
+            height: 30px;
+            background-color:
+                #192a41;
+            /* 设置矩形的颜色 */
+            margin-right: 10px;
+            margin-left: -10px;
+            /*调整矩形的上下位置*/
+            top: -5px;
+        }
+
+        /*---------------比赛信息区---------------*/
+        .game-table {
+            display: flex;
+            width: 100%;
+            /*在这里设置左右盒子横向布局*/
+            flex-direction: row;
+        }
+
+        .first-row {
+            display: flex;
+            color: #F2F2F2;
+            font-family: 华康POP2体W9;
+            background-color: #192a41;
+            border-radius: 4px 0 0 4px;
+            margin-top: 20px;
+            margin-left: 60px;
+            width: 100px;
+            height: 35px;
+            text-align: center;
+            padding-top: 20px;
+            padding-left: 5px;
+        }
+
+        .first-row-middle {
+            display: flex;
+            color: #F2F2F2;
+            font-family: 华康POP2体W9;
+            background-color: #192a41;
+            margin-top: 20px;
+            width: 105px;
+            height: 35px;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .last-row {
+            display: flex;
+            color: #F2F2F2;
+            font-family: 华康POP2体W9;
+            background-color: #192a41;
+            border-radius: 0 4px 4px 0;
+            margin-top: 20px;
+            margin-right: 60px;
+            width: 80px;
+            height: 35px;
+            text-align: center;
+            padding-top: 20px;
+            padding-left: -30px;
+        }
+
+        .record-info {
+            display: flex;
+            background-color: #F2D7D5;
+            height: 45px;
+            margin-left: 60px;
+            margin-right: 55px;
+            border-radius: 3px;
+            margin-top: 15px;
+        }
+
+        .record-info-blue {
+            display: flex;
+            background-color: #A9CCE3;
+            height: 45px;
+            margin-left: 60px;
+            margin-right: 55px;
+            border-radius: 3px;
+            margin-top: 15px;
+        }
+
+
+        .record-col {
+            color: #0b192b;
+            font-family: 微软雅黑;
+            text-align: center;
+            font-size: 12px;
+            padding-top: 15px;
+            padding-left: 10px;
+        }
+
+        .record-col01 {
+            display: flex;
+            flex-grow: 1;
+            width: 50px;
+            color: #0b192b;
+            font-family: 微软雅黑;
+            text-align: center;
+            font-size: 12px;
+            padding-top: 15px;
+        }
+
+        .record-col01 img {
+            display: flex;
+            flex-grow: 1;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+        }
+
+        .BiSaiDuiZhen {
+            /*在这里设置左右盒子横向布局*/
+            display: flex;
+            flex-direction: row;
+            margin-left: 20px;
+            width: 80px;
+        }
+
+        .YingXiong img {
+            display: flex;
+            padding-top: 13px;
+            margin-left: 38px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .KDA {
+            color: #0b192b;
+            font-family: 微软雅黑;
+            text-align: center;
+            font-size: 12px;
+            padding-top: 15px;
+            padding-left: 75px;
+        }
+
+        /*---------这里编辑出装----------*/
+        ul.equip-list {
+            display: flex;
+            list-style-type: none;
+        }
+
+        ul.equip-list img {
+            border-radius: 4px;
+            width: 20px;
+            height: 20px;
+            margin-top: -20px;
+            margin-left: -2px;
+        }
+
+        /*---------这里编辑技能----------*/
+        ul.skill-list {
+            display: flex;
+            list-style-type: none;
+        }
+
+        ul.skill-list img {
+            border-radius: 4px;
+            width: 20px;
+            height: 20px;
+            margin-top: -20px;
+        }
+
+        /*---------这里编辑符文----------*/
+        ul.FuWen-list {
+            display: flex;
+            list-style-type: none;
+            margin-left: 18px;
+        }
+
+        ul.FuWen-list img {
+            border-radius: 4px;
+            width: 20px;
+            height: 20px;
+            margin-top: -20px;
+        }
+
+        /*---------这里编辑查看----------*/
+        .game-button {
+            display: flex;
+            margin-left: 50px;
+            margin-top: 12px;
+        }
+
+        .games-button {
+            border-radius: 5px;
+            background-color: #3D405B;
+            color: #F2F2F2;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="./nav_headerLjx.css" scoped>
+    <link rel="stylesheet" href="./footer.css" scoped>
+    <script src="./functionsLjx.js"></script>
+</head>
+
+<body>
+    <div class="daohang" style="position:relative">
+        <div class="head_div" style="position:absolute;left:0;top:0">
+            <header class="nav-head">
+                <!-- left logo -->
+                <a href="http://www.leagueoflegends.com/en-gb/" target="_blank">
+                    <img class="logo" src="./team/LOL_icon.png">
+                </a>
+                <!-- right nav -->
+                <ul class="nav-ul">
+                    <li class="nav-li">
+                        <a href="http://localhost:3000" class="nav-a active">Home</a >
+                    </li>
+                    <li class="nav-li">
+                        <a href="http://localhost:3000/team" class="nav-a" target="_blank">IG</a>
+                    </li>
+                    <li class="nav-li">
+                        <a href="http://localhost:3000/team" class="nav-a" target="_blank">FPX</a>
+                    </li>
+                    <li class="nav-li">
+                        <a href="http://localhost:3000/team" class="nav-a" target="_blank">EDG</a>
+                    </li>
+                </ul>
+            </header>
+        </div>
+        <!-- 上面是标题栏 -->
+        <div class="biaoti" style="position:absolute;left:0;top:0">
+        </div>
+    </div>
+    <div class="container">
+        <div class="gongjuhe"></div>
+        <div class="left-right">
+            <!-- 让左边父盒子内使用垂直布局 -->
+            <div class="player-introduce-left">
+                <div class="player-detail">
+                    <div class="player-image">
+                        <img id="player-image"
+                            src="https://img.crawler.qq.com/lolwebvideo/20231010190523/3e156159254fd004ced9cfd9a4a67f46/0"
+                            alt="bin">
+                    </div>
+                    <div class="player-info">
+                        <div class="team-logo">
+                            <img id="team-logo"
+                                src="https://img.crawler.qq.com/lolwebvideo/20230921143633/a7dc4b98672506b1572f8c454e3c451b/0"
+                                alt="blg.png">
+                        </div>
+                        <div class="playerName-cn">
+                            <span class="playerName-cn">陈泽彬</span>
+                        </div>
+                        <div class="playerName-en">
+                            <span class="playerName-en">BIN</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="personal-data">
+                    <div class="white-title">Personal Data</div>
+                </div>
+                <div class="personal-table">
+                    <!-- 第一行 -->
+                    <ul>
+                        <li>
+                            <div class="value">22</div>
+                            <div class="lebel">total kills</div>
+                            <div class="rank">league
+                                <span>12th</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="value">23</div>
+                            <div class="lebel">Total deaths</div>
+                            <div class="rank">league
+                                <span>39th</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="value">38</div>
+                            <div class="lebel">total assists</div>
+                            <div class="rank">league
+                                <span>16th</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 第二行 -->
+                    <ul>
+                        <li>
+                            <div class="value">473.24</div>
+                            <div class="lebel">damage per capita</div>
+                            <div class="rank">league
+                                <span>17th</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="value">22%</div>
+                            <div class="lebel">damage percentage</div>
+                            <div class="rank">league
+                                <span>22th</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="value">129%</div>
+                            <div class="lebel">Damage Conversion Rate</div>
+                            <div class="rank">league
+                                <span>14th</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 第三行 -->
+                    <ul>
+                        <li>
+                            <div class="value">711.46</div>
+                            <div class="lebel">Average Injury</div>
+                            <div class="rank">league
+                                <span>11th</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="value">28%</div>
+                            <div class="lebel">Percentage of injuries sustained</div>
+                            <div class="rank">league
+                                <span>10th</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="value">47%</div>
+                            <div class="lebel">participation rate</div>
+                            <div class="rank">league
+                                <span>40th</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 第四行 -->
+                    <ul>
+                        <li>
+                            <div class="value">363.77</div>
+                            <div class="lebel">per capita economy</div>
+                            <div class="rank">league
+                                <span>21th</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="value">20%</div>
+                            <div class="lebel">economic share</div>
+                            <div class="rank">league
+                                <span>24th</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="value">29.19</div>
+                            <div class="lebel">field of view score</div>
+                            <div class="rank">league
+                                <span>38th</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="player-introduce-right">
+                <div class="yinxiong">
+                    <div class="personal-hero">
+                        <div class="black-title">Common Heroes</div>
+                    </div>
+                    <!-- 英雄图片和信息 -->
+                    <ul class="hero-list">
+                        <li class="hero-all">
+                            <div class="hero-image">
+                                <a href="https://yz.lol.qq.com/zh_CN/champion/aatrox/"
+                                    target="_blank">
+                                <img src="https://game.gtimg.cn/images/lol/act/img/champion/Aatrox.png" alt="暗裔剑魔">
+                                </a>
+                            </div>
+                            <div class="hero-name">Aatrox</div>
+                        </li>
+                        <li class="hero-all">
+                            <div class="hero-image">
+                                <a href="https://yz.lol.qq.com/zh_CN/champion/jax/"
+                                    target="_blank">
+                                <img src="https://game.gtimg.cn/images/lol/act/img/champion/Jax.png" alt="武器大师">
+                                </a>
+                            </div>
+                            <div class="hero-name">Jax</div>
+                        </li>
+                        <li class="hero-all">
+                            <div class="hero-image">
+                                <a href="https://yz.lol.qq.com/zh_CN/champion/rumble/"
+                                target="_blank">
+                                <img src="https://game.gtimg.cn/images/lol/act/img/champion/Rumble.png" alt="机械公敌">
+                                </a>
+                            </div>
+                            <div class="hero-name">Rumble</div>
+                        </li>
+                        <li class="hero-all">
+                            <div class="hero-image">
+                                <a href="https://yz.lol.qq.com/zh_CN/champion/ksante/"
+                                target="_blank">
+                                <img src="https://game.gtimg.cn/images/lol/act/img/champion/KSante.png" alt="纳祖芒荣耀">
+                                </a>
+                            </div>
+                            <div class="hero-name">KSante</div>
+                        </li>
+                        <li class="hero-all">
+                            <div class="hero-image">
+                                <a href="https://yz.lol.qq.com/zh_CN/champion/renekton/"
+                                    target="_blank">
+                                    <img src="	https://game.gtimg.cn/images/lol/act/img/champion/Renekton.png"
+                                        alt="荒漠屠夫">
+                                </a>
+                            </div>
+                            <div class="hero-name">Renekton</div>
+                        </li>
+
+                    </ul>
+                    <div class="bisai-jilu">
+
+                        <div class="black-title02">Match Records</div>
+                        <div class="game-table">
+                            <div class="first-row">Time</div>
+                            <div class="first-row-middle">Matchup</div>
+                            <div class="first-row-middle">Hero</div>
+                            <div class="first-row-middle">KDA</div>
+                            <div class="first-row-middle">Equip</div>
+                            <div class="first-row-middle">Skill</div>
+                            <div class="first-row-middle">Power</div>
+                            <div class="last-row">Record</div>
+                        </div>
+                        <!-- 这里开始是单个的比赛信息栏 -->
+                        <div class="record-info">
+                            <div class="record-col">2023-11-11</div>
+                            <div class="BiSaiDuiZhen">
+                                <div class="record-col01"><img
+                                        src="https://img.crawler.qq.com/lolwebvideo/20230921143633/a7dc4b98672506b1572f8c454e3c451b/0"
+                                        alt="blg logo"></div>
+                                <div class="record-col01">Game5</div>
+                                <div class="record-col01"><img
+                                        src="https://img.crawler.qq.com/lolwebvideo/20230921143747/7a28f81c61de2aef3d4306cd97863094/0"
+                                        alt="blg logo"></div>
+                            </div>
+                            <div class="YingXiong"><img
+                                    src="https://game.gtimg.cn/images/lol/act/img/champion/KSante.png" alt="种植园荣耀">
+                            </div>
+                            <div class="KDA">3/5/5</div>
+                            <div class="ChuZhuang">
+                                <ul class="equip-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/8020.png" alt="深渊面具">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/3193.png" alt="石像鬼板甲">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/1029.png" alt="板甲"></li>
+                                    <li><img src="	https://game.gtimg.cn/images/lol/act/img/item/3111.png" alt="水银鞋">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/6665.png" alt="千变者贾修">
+                                    </li>
+                                    <li><img src="https://img2.baidu.com/it/u=851223566,4197606483&fm=253&fmt=auto&app=138&f=JPEG?w=266&h=265"
+                                            alt="空白"></li>
+                                </ul>
+                            </div>
+                            <div class="JiNeng">
+                                <ul class="skill-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/spell/Summoner_flash.png"
+                                            alt="闪现"></li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/spell/Summoner_teleport.png"
+                                            alt="传送"></li>
+                                </ul>
+                            </div>
+                            <div class="FuFen">
+                                <ul class="FuWen-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/rune/GraspOfTheUndying.png"
+                                            alt="不灭之握"></li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/rune/qd.png" alt="启迪"></li>
+                                </ul>
+                            </div>
+                            <div class="ChaKan">
+                                <div class="game-button">
+                                    <a href="https://lpl.qq.com/es/video_detail.shtml?nid=56797" class="underline"
+                                        target="_blank">
+                                        <button class="games-button">Viewing</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 分割线 以下为第二行 -->
+                        <div class="record-info-blue">
+                            <div class="record-col">2023-11-11</div>
+                            <div class="BiSaiDuiZhen">
+                                <div class="record-col01"><img
+                                        src="https://img.crawler.qq.com/lolwebvideo/20230921143633/a7dc4b98672506b1572f8c454e3c451b/0"
+                                        alt="blg logo"></div>
+                                <div class="record-col01">Game4</div>
+                                <div class="record-col01"><img
+                                        src="https://img.crawler.qq.com/lolwebvideo/20230921143747/7a28f81c61de2aef3d4306cd97863094/0"
+                                        alt="blg logo"></div>
+                            </div>
+                            <div class="YingXiong"><img src="https://game.gtimg.cn/images/lol/act/img/champion/Jax.png"
+                                    alt="武器大师">
+                            </div>
+                            <div class="KDA">3/0/6</div>
+                            <div class="ChuZhuang">
+                                <ul class="equip-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/3067.png" alt="燃烧宝石">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/3161.png" alt="青龙刀">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/2420.png" alt="秒表"></li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/1057.png" alt="魔抗披风">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/3047.png" alt="铁板靴">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/3078.png" alt="三相之力">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="JiNeng">
+                                <ul class="skill-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/spell/Summoner_flash.png"
+                                            alt="闪现"></li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/spell/Summoner_teleport.png"
+                                            alt="传送"></li>
+                                </ul>
+                            </div>
+                            <div class="FuFen">
+                                <ul class="FuWen-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/rune/GraspOfTheUndying.png"
+                                            alt="不灭之握"></li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/rune/qd.png" alt="启迪"></li>
+                                </ul>
+                            </div>
+                            <div class="ChaKan">
+                                <div class="game-button">
+                                    <a href="https://lpl.qq.com/es/video_detail.shtml?nid=56797" class="underline"
+                                        target="_blank">
+                                        <button class="games-button">Viewing</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 分割线 以下是第三行 -->
+                        <div class="record-info">
+                            <div class="record-col">2023-11-11</div>
+                            <div class="BiSaiDuiZhen">
+                                <div class="record-col01"><img
+                                        src="https://img.crawler.qq.com/lolwebvideo/20230921143633/a7dc4b98672506b1572f8c454e3c451b/0"
+                                        alt="blg logo"></div>
+                                <div class="record-col01">Game3</div>
+                                <div class="record-col01"><img
+                                        src="https://img.crawler.qq.com/lolwebvideo/20230921143747/7a28f81c61de2aef3d4306cd97863094/0"
+                                        alt="blg logo"></div>
+                            </div>
+                            <div class="YingXiong"><img
+                                    src="https://game.gtimg.cn/images/lol/act/img/champion/Aatrox.png" alt="暗裔剑魔">
+                            </div>
+                            <div class="KDA">0/3/1</div>
+                            <div class="ChuZhuang">
+                                <ul class="equip-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/1037.png" alt="十字镐">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/3047.png" alt="铁板靴">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/6691.png" alt="暮刃"></li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/3044.png" alt="净蚀">
+                                    </li>
+                                    <li><img src="https://img2.baidu.com/it/u=851223566,4197606483&fm=253&fmt=auto&app=138&f=JPEG?w=266&h=265"
+                                            alt="空白">
+                                    </li>
+                                    <li><img src="https://img2.baidu.com/it/u=851223566,4197606483&fm=253&fmt=auto&app=138&f=JPEG?w=266&h=265"
+                                            alt="空白"></li>
+                                </ul>
+                            </div>
+                            <div class="JiNeng">
+                                <ul class="skill-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/spell/Summoner_flash.png"
+                                            alt="闪现"></li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/spell/Summoner_teleport.png"
+                                            alt="传送"></li>
+                                </ul>
+                            </div>
+                            <div class="FuFen">
+                                <ul class="FuWen-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/rune/ArcaneComet.png"
+                                            alt="奥数彗星"></li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/rune/jj.png" alt="坚决"></li>
+                                </ul>
+                            </div>
+                            <div class="ChaKan">
+                                <div class="game-button">
+                                    <a href="https://lpl.qq.com/es/video_detail.shtml?nid=56797" class="underline"
+                                        target="_blank">
+                                        <button class="games-button">Viewing</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 分割线 以下为第四行 -->
+                        <div class="record-info-blue">
+                            <div class="record-col">2023-11-11</div>
+                            <div class="BiSaiDuiZhen">
+                                <div class="record-col01"><img
+                                        src="https://img.crawler.qq.com/lolwebvideo/20230921143633/a7dc4b98672506b1572f8c454e3c451b/0"
+                                        alt="blg logo"></div>
+                                <div class="record-col01">Game2</div>
+                                <div class="record-col01"><img
+                                        src="https://img.crawler.qq.com/lolwebvideo/20230921143747/7a28f81c61de2aef3d4306cd97863094/0"
+                                        alt="blg logo"></div>
+                            </div>
+                            <div class="YingXiong"><img src="https://game.gtimg.cn/images/lol/act/img/champion/Jax.png"
+                                    alt="武器大师">
+                            </div>
+                            <div class="KDA">5/6/3</div>
+                            <div class="ChuZhuang">
+                                <ul class="equip-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/3067.png" alt="燃烧宝石">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/3133.png" alt="战锤">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/3157.png" alt="中亚沙漏">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/3111.png" alt="水银鞋">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/6632.png" alt="神圣分离者">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/3071.png" alt="咳血战斧">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="JiNeng">
+                                <ul class="skill-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/spell/Summoner_flash.png"
+                                            alt="闪现"></li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/spell/Summoner_teleport.png"
+                                            alt="传送"></li>
+                                </ul>
+                            </div>
+                            <div class="FuFen">
+                                <ul class="FuWen-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/rune/LethalTempoTemp.png"
+                                            alt="致命节奏"></li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/rune/qd.png" alt="启迪"></li>
+                                </ul>
+                            </div>
+                            <div class="ChaKan">
+                                <div class="game-button">
+                                    <a href="https://lpl.qq.com/es/video_detail.shtml?nid=56797" class="underline"
+                                        target="_blank">
+                                        <button class="games-button">Viewing</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 分割线 以下是第五行 -->
+                        <div class="record-info">
+                            <div class="record-col">2023-11-11</div>
+                            <div class="BiSaiDuiZhen">
+                                <div class="record-col01"><img
+                                        src="https://img.crawler.qq.com/lolwebvideo/20230921143633/a7dc4b98672506b1572f8c454e3c451b/0"
+                                        alt="blg logo"></div>
+                                <div class="record-col01">Game1</div>
+                                <div class="record-col01"><img
+                                        src="https://img.crawler.qq.com/lolwebvideo/20230921143747/7a28f81c61de2aef3d4306cd97863094/0"
+                                        alt="blg logo"></div>
+                            </div>
+                            <div class="YingXiong"><img
+                                    src="https://game.gtimg.cn/images/lol/act/img/champion/KSante.png" alt="种植园荣耀">
+                            </div>
+                            <div class="KDA">3/5/5</div>
+                            <div class="ChuZhuang">
+                                <ul class="equip-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/8020.png" alt="深渊面具">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/3193.png" alt="石像鬼板甲">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/1029.png" alt="板甲"></li>
+                                    <li><img src="	https://game.gtimg.cn/images/lol/act/img/item/3111.png" alt="水银鞋">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/6665.png" alt="千变者贾修">
+                                    </li>
+                                    <li><img src="https://img2.baidu.com/it/u=851223566,4197606483&fm=253&fmt=auto&app=138&f=JPEG?w=266&h=265"
+                                            alt="空白"></li>
+                                </ul>
+                            </div>
+                            <div class="JiNeng">
+                                <ul class="skill-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/spell/Summoner_flash.png"
+                                            alt="闪现"></li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/spell/Summoner_teleport.png"
+                                            alt="传送"></li>
+                                </ul>
+                            </div>
+                            <div class="FuFen">
+                                <ul class="FuWen-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/rune/GraspOfTheUndying.png"
+                                            alt="不灭之握"></li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/rune/qd.png" alt="启迪"></li>
+                                </ul>
+                            </div>
+                            <div class="ChaKan">
+                                <div class="game-button">
+                                    <a href="https://lpl.qq.com/es/video_detail.shtml?nid=56797" class="underline"
+                                        target="_blank">
+                                        <button class="games-button">Viewing</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 分割线 -->
+                        <div class="record-info-blue">
+                            <div class="record-col">2023-11-11</div>
+                            <div class="BiSaiDuiZhen">
+                                <div class="record-col01"><img
+                                        src="https://img.crawler.qq.com/lolwebvideo/20230921143633/a7dc4b98672506b1572f8c454e3c451b/0"
+                                        alt="blg logo"></div>
+                                <div class="record-col01">Game5</div>
+                                <div class="record-col01"><img
+                                        src="https://img.crawler.qq.com/lolwebvideo/20230921143747/7a28f81c61de2aef3d4306cd97863094/0"
+                                        alt="blg logo"></div>
+                            </div>
+                            <div class="YingXiong"><img
+                                    src="https://game.gtimg.cn/images/lol/act/img/champion/KSante.png" alt="种植园荣耀">
+                            </div>
+                            <div class="KDA">3/5/5</div>
+                            <div class="ChuZhuang">
+                                <ul class="equip-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/8020.png" alt="深渊面具">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/3193.png" alt="石像鬼板甲">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/1029.png" alt="板甲"></li>
+                                    <li><img src="	https://game.gtimg.cn/images/lol/act/img/item/3111.png" alt="水银鞋">
+                                    </li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/item/6665.png" alt="千变者贾修">
+                                    </li>
+                                    <li><img src="https://img2.baidu.com/it/u=851223566,4197606483&fm=253&fmt=auto&app=138&f=JPEG?w=266&h=265"
+                                            alt="空白"></li>
+                                </ul>
+                            </div>
+                            <div class="JiNeng">
+                                <ul class="skill-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/spell/Summoner_flash.png"
+                                            alt="闪现"></li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/spell/Summoner_teleport.png"
+                                            alt="传送"></li>
+                                </ul>
+                            </div>
+                            <div class="FuFen">
+                                <ul class="FuWen-list">
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/rune/GraspOfTheUndying.png"
+                                            alt="不灭之握"></li>
+                                    <li><img src="https://game.gtimg.cn/images/lol/act/img/rune/qd.png" alt="启迪"></li>
+                                </ul>
+                            </div>
+                            <div class="ChaKan">
+                                <div class="game-button">
+                                    <a href="https://lpl.qq.com/es/video_detail.shtml?nid=56797" class="underline"
+                                        target="_blank">
+                                        <button class="games-button">Viewing</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 分割线 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <table class="footer-table">
+                <tr>
+                    <th class="footer-data">Group Member</th>
+                    <th class="footer-data">Student ID</th>
+                </tr>
+                <tr>
+                    <td class="footer-data">Chen Hao Dong</td>
+                    <td class="footer-data">23443383</td>
+                </tr>
+                <tr>
+                    <td class="footer-data">Lin Hai Long</td>
+                    <td class="footer-data">23473142</td>
+                </tr>
+                <tr>
+                    <td class="footer-data">Liu Jia Xin</td>
+                    <td class="footer-data">23433698</td>
+                </tr>
+                <tr>
+                    <td class="footer-data">Liu Zheng</td>
+                    <td class="footer-data">23427973</td>
+                </tr>
+            </table>
+            <div class="other-info">
+                <p class="footer-p">联系我们：</p>
+                <p class="footer-p">
+                    <a class="footer-a" href="mailto:23473142@life.hkbu.edu.hk">23473142@life.hkbu.edu.hk</a>
+                </p>
+                <p class="footer-p">本网站适合所有爱好LOL的玩家；希望您能找到想要的信息。</p>
+                <p class="footer-p">
+                    COPYRIGHT &copy; 2023 HKBU-AIDM7450
+                </p>
+                <p class="footer-p">
+                    本网站仅为课程项目，无任何其他用途，如有侵权，联系删除。
+                </p>
+                <p class="footer-p">
+                    <a class="footer-a" href="https://lol.fandom.com/wiki/League_of_Legends_Esports_Wiki" target="_blank">图片来源</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
